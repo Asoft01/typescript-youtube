@@ -1,0 +1,3 @@
+tsc main.ts -w
+tsc --init
+tsc -w
