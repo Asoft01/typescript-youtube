@@ -9,17 +9,28 @@
 ////////////////////////////////////////////////////////////////
 // let myName: string = 'Dave';
 // myName = 42;
-let myName = 'Dave';
-let meaningOfLife;
-let isLoading;
-// let album: any;
-let album;
-myName = 'John';
-meaningOfLife = 42;
-isLoading = true;
-const sum = (a, b) => {
-    return a + b;
-};
-let postId;
-let isActive;
-let re = /\w+/g;
+// let myName: string = 'Dave';
+// let meaningOfLife: number;
+// let isLoading: boolean;
+// // let album: any;
+// let album: string | number; 
+// myName= 'John'; 
+// meaningOfLife = 42; 
+// isLoading = true;
+// const sum = (a: number, b: string) => {
+//     return a + b;
+// }
+// let postId: string | number;
+// let isActive: number | boolean; 
+// let re: RegExp = /\w+/g 
+/////////////////////////////////////////////////////////////////
+let stringArr = ['one', 'hey', 'Dave'];
+let guitars = ['Star', 'Les Paul', 5150];
+let mixedData = ['EVH', 1984, true];
+stringArr[0] = 'John';
+stringArr.push('hey');
+guitars[0] = 1984;
+// guitars.unshift('Jim'); 
+let tests = [];
+let bands = [];
+bands.push('Van Halen');
