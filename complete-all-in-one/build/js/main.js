@@ -159,3 +159,26 @@ const sumAll = (a = 10, b, c = 2) => {
 logMsg(addAll(2, 3, 2));
 logMsg(addAll(2, 3));
 logMsg(sumAll(2, 3));
+logMsg(sumAll(undefined, 3));
+// Rest parameters 
+// const total = (...nums: number[]): number => {
+//     return nums.reduce((prev, curr) => prev + curr)
+// }
+// logMsg(total(1, 2, 3,4));
+/////// More ways for rest parameters 
+const total = (a, ...nums) => {
+    // return nums.reduce((prev, curr) => prev + curr);
+    return a + nums.reduce((prev, curr) => prev + curr);
+};
+logMsg(total(10, 2, 3));
+const createError = (errMsg) => {
+    throw new Error(errMsg);
+};
+const infinite = () => {
+    let i = 1;
+    while (true) {
+        i++;
+        if (i > 100)
+            break;
+    }
+};
