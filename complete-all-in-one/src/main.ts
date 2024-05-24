@@ -212,7 +212,6 @@ logMsg(sumAll(undefined, 3));
 // const total = (...nums: number[]): number => {
 //     return nums.reduce((prev, curr) => prev + curr)
 // }
-
 // logMsg(total(1, 2, 3,4));
 
 /////// More ways for rest parameters 
@@ -233,4 +232,17 @@ const infinite = () => {
         i++
         if(i > 100) break;
     }
+}
+
+// custom type guard
+const isNumber = (value: any): boolean => {
+    return typeof value === 'number' ? true : false;
+}
+
+// use of the never type
+const numberOrString = (value: number | string): string => {
+    if (typeof value === 'string')  return 'string'; 
+    // if (typeof value === 'number') return 'number';
+    if(isNumber(value)) return 'number';
+    return createError('This should never happen!')
 }
