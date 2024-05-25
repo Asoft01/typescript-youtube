@@ -219,3 +219,35 @@ const myImg = document.getElementById('#myId');
 const nextImg = document.getElementById("#img");
 img.src;
 myImg.src;
+/////////////////////////// Classes ///////////////////////////////////////
+// class Coder {
+//     name: string
+//     music: string
+//     age: number
+//     lang: string
+//     constructor(
+//         name: string, 
+//         music: string, 
+//         age: number, 
+//         lang: string
+//     ){
+//         this.name = name;
+//         this.music = music; 
+//         this.age = age; 
+//         this.lang = lang;
+//     }
+// }
+//////////////////////// Using Visibility Modifiers //////////////////////////
+class Coder {
+    constructor(name, music, age, lang = 'Typescript') {
+        this.name = name;
+        this.music = music;
+        this.age = age;
+        this.lang = lang;
+        this.name = name;
+        this.music = music;
+        this.age = age;
+        this.lang = lang;
+    }
+}
+const Dave = new Coder('Dave', 'Rock', 42);

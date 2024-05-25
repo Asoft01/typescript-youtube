@@ -281,3 +281,41 @@ const nextImg = <HTMLImageElement>document.getElementById("#img");
 
 img.src
 myImg.src;
+
+/////////////////////////// Classes ///////////////////////////////////////
+// class Coder {
+//     name: string
+//     music: string
+//     age: number
+//     lang: string
+
+//     constructor(
+//         name: string, 
+//         music: string, 
+//         age: number, 
+//         lang: string
+//     ){
+//         this.name = name;
+//         this.music = music; 
+//         this.age = age; 
+//         this.lang = lang;
+//     }
+// }
+
+//////////////////////// Using Visibility Modifiers //////////////////////////
+class Coder {
+    secondLang!: string; 
+    constructor(
+        public readonly name: string, 
+        public music: string, 
+        private age: number, 
+        protected lang: string = 'Typescript'
+    ){
+        this.name = name;
+        this.music = music; 
+        this.age = age; 
+        this.lang = lang;
+    }
+}
+
+const Dave = new Coder('Dave', 'Rock', 42); 
