@@ -182,3 +182,40 @@ const infinite = () => {
             break;
     }
 };
+// custom type guard
+const isNumber = (value) => {
+    return typeof value === 'number' ? true : false;
+};
+// use of the never type
+const numberOrString = (value) => {
+    if (typeof value === 'string')
+        return 'string';
+    // if (typeof value === 'number') return 'number';
+    if (isNumber(value))
+        return 'number';
+    return createError('This should never happen!');
+};
+// convert to more or less specific 
+let a = 'hello';
+let b = a; // less specific type 
+let c = a; // more specific type
+let d = 'world';
+let e = 'world';
+const addOrConcat = (a, b, c) => {
+    if (c === 'add')
+        return a + b;
+    return '' + a + b;
+};
+let myVal = addOrConcat(2, 2, 'concat');
+// Be careful! TS sees no problem - but a string is returned
+let nextVal = addOrConcat(2, 2, 'concat');
+// 10 as string;
+// (10 as unknown) as string;
+//////////////////////////////// The DOM /////////////////////////////////
+const img = document.querySelector('img');
+// const img = document.querySelector('img') as HTMLImageElement;
+// const myImg = document.getElementById('#myId') as HTMLImageElement;
+const myImg = document.getElementById('#myId');
+const nextImg = document.getElementById("#img");
+img.src;
+myImg.src;
